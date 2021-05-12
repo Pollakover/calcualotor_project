@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+    <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Radix calculator</title>
+            <link rel="stylesheet" href="number_systems.css" />
+            <link rel="icon" href="https://i.imgur.com/SgqtC1R.png">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <a class="logo" onclick="history.back();"><i class="fas fa-calculator"></i></a>
+                <div class="calc-head"><a onclick="history.back();">cALLculator</a></div>
+            </header>
+            
+            <main>
+                <div class="first-main-row">Изначальное число:</div>
+                <div class="second-main-row">
+                    <input class="number-input" id="number-input" placeholder="Введите число" oninput="this.value = this.value.replace(/[^\d]/g,'');"><button class="erase" title="Стереть ответ"><i class="far fa-times-circle" id="erase-icon"></i></button>
+                </div>
+                <!--<div class="message"><i class="fas fa-exclamation-circle"></i> Это число не содержится в выбранной вами системе счисления</div>-->
+                <div class="third-main-row">
+                    Перевести из <input class="radix-input" id="radix" type="text" required maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'');"> в <input class="radix-output" id="radix" type="text" required maxlength="2" oninput="this.value=this.value.replace(/[^0-9]/g,'');"> систему<br>
+                    <div class="warning">*Основание системы должно быть не меньше 2 и не больше 10</div>
+                </div>
+                <!--<div class="message"><i class="fas fa-exclamation-circle"></i> Основание системы счисления должно быть не меньше 2 и не больше 16</div>-->
+                <div  class="fourth-main-row"><hr></div>
+                <div class="fifth-main-row">Ответ:</div>
+                <div class="sixth-main-row">
+                    <div class="count-plus-output">
+                        <button class="count">=</button><input readonly class="number-output" placeholder="Итоговое число" oninput="this.value=this.value.replace(/[^0-9a-fA-F]/g,'');">
+                    </div>
+                    <button class="copy"><i class="far fa-copy" id="copy-icon"></i></button>
+                </div>
+                <div class="seventh-main-row" id="copied-message"><i class="fas fa-exclamation-circle"></i> Ответ скопирован</div>
+            </main>
+ 
+            <script src="https://kit.fontawesome.com/c1c239f91b.js" crossorigin="anonymous"></script>
+            <script src="number_systems.js"></script>
+        </body>
+    </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+    <html lang="ru">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Arithmetic calculator</title>
+            <link rel="stylesheet" href="arithmetic_calculator.css" />
+            <link rel="icon" href="https://i.imgur.com/SgqtC1R.png">
+
+            <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <header>
+                <a class="logo" onclick="history.back();"><i class="fas fa-calculator"></i></a>
+                <div class="calc-head"><a onclick="history.back();">cALLculator</a></div>
+            </header>
+            <main>
+                <input class="numput" placeholder="0" type="text" oninput="this.value=this.value.replace(/[^0-9+-.*/]/g,'');">
+                <div class="buttons">
+                    <div class="row_1">
+                        <div class="row_11">
+                            <button class="digit">7</button>
+                            <button class="digit">8</button>
+                        </div>
+                        <button class="digit">9</button>
+                        <button class="clear"><i class="fas fa-backspace"></i></button>
+                    </div>
+                    <div class="row_2">
+                        <div class="row_22">
+                            <button class="digit">4</button>
+                            <button class="digit">5</button>
+                        </div>
+                        <button class="digit">6</button>
+                        <div class="row_21">
+                            <button class="operation" id="exponentiation">x<sup>y</sup></button>
+                            <button class="equals">=</button>
+                        </div>
+                    </div>
+                    <div class="row_3">
+                        <div class="row_32">
+                            <button class="digit">1</button>
+                            <button class="digit">2</button>
+                        </div>
+                        <button class="digit">3</button>
+                        <div class="row_31">
+                            <button class="operation" id="addition">+</button>
+                            <button class="operation" id="subtraction">-</button>
+                        </div>
+                    </div>
+                    <div class="row_4">
+                        <button class="digit">0</button>
+                        <button class="digit">.</button>
+                        <div class="row_41">
+                            <button class="operation" id="multiplication">×</button>
+                            <button class="operation" id="division">÷</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <button class="divisionAlt" hidden>/</button>
+            <button class="multiplicationAlt" hidden>*</button>
+            <button class="exponentiationAlt" hidden>**</button>
+
+            <script src="https://kit.fontawesome.com/c1c239f91b.js" crossorigin="anonymous"></script>
+            <script src="arithmetic_calculator.js"></script>
+
+        </body>
+    </html>
